@@ -1,6 +1,20 @@
 {
   "Person": [
     {
+      "Name": "Петр",
+      "Surname": "Петров",
+      "BirthDate": "12.05.1990",
+      "Sex": "male",
+      "HomeTown": "Москва"
+    },
+    {
+      "Name": "Георгий",
+      "Surname": "Иванов",
+      "BirthDate": "18.05.1986",
+      "Sex": "female",
+      "HomeTown": "Мухосранск"
+    },
+    {
       "Name": "Иван",
       "Surname": "Иванов",
       "BirthDate": "12.05.1990",
@@ -28,26 +42,13 @@
       "Sex": "male",
       "HomeTown": "Таганрог"
     },
-    {
-      "Name": "Петр",
-      "Surname": "Петров",
-      "BirthDate": "12.05.1990",
-      "Sex": "male",
-      "HomeTown": "Москва"
-    },
+
     {
       "Name": "Игорь",
       "Surname": "Сидоров",
       "BirthDate": "12.05.1986",
       "Sex": "male",
       "HomeTown": "Тамбов"
-    },
-    {
-      "Name": "Георгий",
-      "Surname": "Иванов",
-      "BirthDate": "18.05.1986",
-      "Sex": "female",
-      "HomeTown": "Мухосранск"
-    }
+    }    
   ]
 }

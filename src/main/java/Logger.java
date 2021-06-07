@@ -8,11 +8,11 @@ public class Logger {
     private static void PrintLog(ArrayList<PersonJSONObject> aListPerson) {
         StringBuilder SB = new StringBuilder();
         aListPerson.forEach(item -> {
-            SB.append("Фамилия: ").append(item.getSurname()).append(" ");
-            SB.append("Имя: ").append(item.getName()).append(" ");
-            SB.append("Дата рождения: ").append(item.getBirthDate()).append(" ");
-            SB.append("Пол: ").append(item.getSex()).append(" ");
-            SB.append("Прописка: ").append(item.getHomeTown()).append(" ");
+            SB.append("Фамилия: ").append(item.getSurname()).append(" ").append("\n");
+            SB.append("Имя: ").append(item.getName()).append(" ").append("\n");
+            SB.append("Дата рождения: ").append(item.getBirthDate()).append(" ").append("\n");
+            SB.append("Пол: ").append(item.getSex()).append(" ").append("\n");
+            SB.append("Прописка: ").append(item.getHomeTown()).append(" ").append("\n");
             SB.append("\n");
         });
         System.out.println(SB);
@@ -28,13 +28,12 @@ public class Logger {
                 }
             }
             else {
-                if(aPageNumber == 1)
-                    PrintLog(aListPerson.get(aPageNumber));
-                else
-                    if(aPageNumber > 1)
-                        PrintLog(aListPerson.get(aPageNumber - 1));
+                if(aPageNumber >= 1)
+                    PrintLog(aListPerson.get(aPageNumber - 1));
             }
         }
+        else
+            System.out.println("Нет данных, удовлетвояющих условию фильтра");
     }
 }
 

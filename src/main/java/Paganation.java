@@ -12,7 +12,23 @@ public class Paganation {
             ArrayList<T> chunk = new ArrayList<>(list.subList(i, Math.min(list.size(), i + chunkSize)));
             chunks.add(chunk);
         }
-
         return chunks;
+    }
+
+    public static <T> ArrayList<ArrayList<T>> getListOfPaganation(ArrayList<T> aCollection, int aSizePage) {
+
+        ArrayList<ArrayList<T>> result = new ArrayList<>();
+        if(aCollection != null) {
+            if(aCollection.size() < aSizePage) {
+                result.add(aCollection);
+                return result;
+            }
+            else {
+                if(aCollection.size() > aSizePage) {
+                    result = toChunk(aCollection, aSizePage);
+                }
+            }
+        }
+        return result;
     }
 }

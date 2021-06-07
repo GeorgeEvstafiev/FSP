@@ -6,10 +6,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.json.simple.parser.ParseException;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -19,7 +17,6 @@ public class PersonJSONObject implements Comparable<PersonJSONObject> {
     private String Name;
     private String Surname;
     private LocalDate BirthDate;
-    //private String BirthDate;
     private String Sex;
     private String HomeTown;
     private ArrayList<PersonJSONObject> ListPersonJSONObject;
@@ -32,49 +29,46 @@ public class PersonJSONObject implements Comparable<PersonJSONObject> {
     public PersonJSONObject(){
     }
 
-    //сеттеры
-    private void setBirthDate(String aBirthDate) {
-       /* try {
-            Date date = new SimpleDateFormat("dd.MM.YYYY").parse(aBirthDate);
-            BirthDate = date;
-        } catch (java.text.ParseException e) {
-            e.printStackTrace();
-        }*/
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
-        BirthDate = LocalDate.parse(aBirthDate, formatter);
-
-        //BirthDate = aBirthDate;
-    }
-
-    private void setHomeTown(String aHomeTown) {
+    public PersonJSONObject(String aName, String aSurname, String aBirthDate, String aSex, String aHomeTown) {
+        Name = aName;
+        Surname = aSurname;
+        setBirthDate(aBirthDate);
+        Sex = aSex;
         HomeTown = aHomeTown;
     }
 
-    private void setName(String aName) {
-        Name = aName;
+    //сеттеры
+    public void setBirthDate(String aBirthDate) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.uuuu");
+        BirthDate = LocalDate.parse(aBirthDate, formatter);
     }
 
-    private void setSex(String aSex) {
-        Sex = aSex;
+    public void setHomeTown(String aHomeTown) {
+        this.HomeTown = aHomeTown;
     }
 
-    private void setSurname(String aSurname) {
-        Surname = aSurname;
+    public void setName(String aName) {
+        this.Name = aName;
+    }
+
+    public void setSex(String aSex) {
+        this.Sex = aSex;
+    }
+
+    public void setSurname(String aSurname) {
+        this.Surname = aSurname;
     }
 
     //геттеры
-    /*public Date getBirthDate() {
-        return BirthDate;
-    }*/
-    public LocalDate getBirthDate() { return BirthDate; }
+    public LocalDate getBirthDate() { return this.BirthDate; }
 
-    public String getHomeTown() { return HomeTown; }
+    public String getHomeTown() { return this.HomeTown; }
 
-    public String getName() { return Name; }
+    public String getName() { return this.Name; }
 
-    public String getSex() { return Sex; }
+    public String getSex() { return this.Sex; }
 
-    public String getSurname() { return Surname; }
+    public String getSurname() { return this.Surname; }
 
     public ArrayList<PersonJSONObject> getPersonJSONObject() {
         if(ListPersonJSONObject == null) {
@@ -90,8 +84,8 @@ public class PersonJSONObject implements Comparable<PersonJSONObject> {
     @Override
     public int hashCode()
     {
-        return new HashCodeBuilder().append(getSurname().hashCode())
-                .append(getName().hashCode())
+        return new HashCodeBuilder().append(getName().hashCode())
+                .append(getSurname().hashCode())
                 .append(((Integer)getBirthDate().getYear()).hashCode())
                 .append(getBirthDate().getMonth().hashCode())
                 .append(((Integer)getBirthDate().getDayOfMonth()).hashCode())
@@ -111,8 +105,8 @@ public class PersonJSONObject implements Comparable<PersonJSONObject> {
             return false;
         }
         PersonJSONObject other = (PersonJSONObject) obj;
-        return new EqualsBuilder().append(this.Surname, other.getSurname())
-                .append(this.Name, other.getName())
+        return new EqualsBuilder().append(this.Name, other.getName())
+                .append(this.Surname, other.getSurname())
                 .append(this.BirthDate.getYear(), other.getBirthDate().getYear())
                 .append(this.BirthDate.getMonth(), other.getBirthDate().getMonth())
                 .append(this.BirthDate.getDayOfMonth(), other.getBirthDate().getDayOfMonth())

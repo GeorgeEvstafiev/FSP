@@ -8,7 +8,5 @@ public class ComparatorSurname implements Comparator<PersonJSONObject>  {
     }
 
     @Override
-    public Comparator<PersonJSONObject> reversed() {
-        return Comparator.super.reversed();
-    }
+    public Comparator<PersonJSONObject> reversed() { return Comparator.super.reversed(); }
 }

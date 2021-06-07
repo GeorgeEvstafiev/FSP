@@ -3,20 +3,6 @@
     {
       "Name": "Иван",
       "Surname": "Иванов",
-      "BirthDate": "12.05.1990",
-      "Sex": "male",
-      "HomeTown": "Таганрог"
-    },
-    {
-      "Name": "Евгений",
-      "Surname": "Иванов",
-      "BirthDate": "12.08.1900",
-      "Sex": "male",
-      "HomeTown": "Таганрог"
-    },
-    {
-      "Name": "Иван",
-      "Surname": "Иванов",
       "BirthDate": "12.10.2000",
       "Sex": "male",
       "HomeTown": "Таганрог"
@@ -29,11 +15,25 @@
       "HomeTown": "Таганрог"
     },
     {
+      "Name": "Иван",
+      "Surname": "Иванов",
+      "BirthDate": "12.05.1990",
+      "Sex": "male",
+      "HomeTown": "Таганрог"
+    },
+    {
       "Name": "Петр",
       "Surname": "Петров",
       "BirthDate": "12.05.1990",
       "Sex": "male",
       "HomeTown": "Москва"
+    },
+    {
+      "Name": "Георгий",
+      "Surname": "Иванов",
+      "BirthDate": "18.05.1986",
+      "Sex": "female",
+      "HomeTown": "Мухосранск"
     },
     {
       "Name": "Игорь",
@@ -43,11 +43,11 @@
       "HomeTown": "Тамбов"
     },
     {
-      "Name": "Георгий",
+      "Name": "Евгений",
       "Surname": "Иванов",
-      "BirthDate": "18.05.1986",
-      "Sex": "female",
-      "HomeTown": "Мухосранск"
+      "BirthDate": "12.08.1900",
+      "Sex": "male",
+      "HomeTown": "Таганрог"
     }
   ]
 }
