@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.Hashtable;
 
-class SortedViaStreamImplTest {
+class FiltredSortedTest {
 
     @Test
     void testSortedViaStreamImplTest() {
