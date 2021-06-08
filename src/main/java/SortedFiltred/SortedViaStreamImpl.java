@@ -1,8 +1,13 @@
+package SortedFiltred;
+
+import Interface.Sorted;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.stream.Collectors;
+import DescriptionObject.PersonJSONObject;
 
-public class SortedViaStreamImpl implements Sorted{
+public class SortedViaStreamImpl implements Sorted {
 
     private ArrayList<PersonJSONObject> ListPersonJSONObject;
 

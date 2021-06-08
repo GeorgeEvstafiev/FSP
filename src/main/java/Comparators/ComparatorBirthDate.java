@@ -1,4 +1,7 @@
+package Comparators;
+
 import java.util.Comparator;
+import DescriptionObject.PersonJSONObject;
 
 public class ComparatorBirthDate implements Comparator<PersonJSONObject> {
 

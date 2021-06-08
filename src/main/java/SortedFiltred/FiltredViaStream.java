@@ -1,3 +1,5 @@
+package SortedFiltred;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
@@ -5,6 +7,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.stream.Collectors;
+import DescriptionObject.PersonJSONObject;
 
 public class FiltredViaStream {
 

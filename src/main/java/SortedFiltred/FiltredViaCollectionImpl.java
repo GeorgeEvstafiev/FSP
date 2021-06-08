@@ -1,9 +1,12 @@
+package SortedFiltred;
+
+import Interface.Filtred;
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Hashtable;
+import DescriptionObject.PersonJSONObject;
 
 public class FiltredViaCollectionImpl implements Filtred {
 

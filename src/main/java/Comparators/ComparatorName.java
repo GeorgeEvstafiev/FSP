@@ -1,10 +1,13 @@
-import java.util.Comparator;
+package Comparators;
 
-public class ComparatorSurname implements Comparator<PersonJSONObject>  {
+import java.util.Comparator;
+import DescriptionObject.PersonJSONObject;
+
+public class ComparatorName implements Comparator<PersonJSONObject> {
 
     @Override
     public int compare(PersonJSONObject o1, PersonJSONObject o2) {
-        return o1.getSurname().compareTo(o2.getSurname());
+        return o1.getName().compareTo(o2.getName());
     }
 
     @Override
