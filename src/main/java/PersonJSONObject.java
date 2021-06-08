@@ -1,3 +1,4 @@
+import org.jetbrains.annotations.NotNull;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -27,14 +28,6 @@ public class PersonJSONObject implements Comparable<PersonJSONObject> {
     }
 
     public PersonJSONObject(){
-    }
-
-    public PersonJSONObject(String aName, String aSurname, String aBirthDate, String aSex, String aHomeTown) {
-        Name = aName;
-        Surname = aSurname;
-        setBirthDate(aBirthDate);
-        Sex = aSex;
-        HomeTown = aHomeTown;
     }
 
     //сеттеры
@@ -149,7 +142,7 @@ public class PersonJSONObject implements Comparable<PersonJSONObject> {
     }
 
     @Override
-    public int compareTo(PersonJSONObject o) {
+    public int compareTo(@NotNull PersonJSONObject o) {
         return 0;
     }
 }

@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class Logger {
@@ -5,7 +7,7 @@ public class Logger {
     public Logger(){
     }
 
-    private static void PrintLog(ArrayList<PersonJSONObject> aListPerson) {
+    private static void PrintLog(@NotNull ArrayList<PersonJSONObject> aListPerson) {
         StringBuilder SB = new StringBuilder();
         aListPerson.forEach(item -> {
             SB.append("Фамилия: ").append(item.getSurname()).append(" ").append("\n");
@@ -18,7 +20,7 @@ public class Logger {
         System.out.println(SB);
     }
 
-    public static void Print(ArrayList<ArrayList<PersonJSONObject>> aListPerson,
+    public static void Print(@NotNull ArrayList<ArrayList<PersonJSONObject>> aListPerson,
                              int aPageNumber) {
         if(aListPerson.size() > 0) {
             if(aPageNumber == -1) {

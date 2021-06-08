@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 
 public class Paganation {
@@ -5,7 +7,8 @@ public class Paganation {
     public Paganation(){
     }
 
-    public static <T> ArrayList<ArrayList<T>> toChunk(ArrayList<T> list, int chunkSize){
+    @NotNull
+    public static <T> ArrayList<ArrayList<T>> toChunk(@NotNull ArrayList<T> list, int chunkSize){
         ArrayList<ArrayList<T>> chunks = new ArrayList<>();
 
         for (int i = 0; i < list.size(); i += chunkSize) {
