@@ -1,0 +1,32 @@
+{
+  "Person": [
+    {
+      "Name": "Иван",
+      "Surname": "Иванов",
+      "BirthDate": "12.05.1990",
+      "Sex": "male",
+      "HomeTown": "Таганрог"
+    },
+    {
+      "Name": "Евгений",
+      "Surname": "Иванов",
+      "BirthDate": "12.08.1900",
+      "Sex": "male",
+      "HomeTown": "Таганрог"
+    },
+    {
+      "Name": "Иван",
+      "Surname": "Иванов",
+      "BirthDate": "12.10.2000",
+      "Sex": "male",
+      "HomeTown": "Таганрог"
+    },
+    {
+      "Name": "Олег",
+      "Surname": "Иванов",
+      "BirthDate": "12.05.1991",
+      "Sex": "male",
+      "HomeTown": "Таганрог"
+    }
+  ]
+}
